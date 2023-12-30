@@ -1,0 +1,116 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Opponent.gd" type="Script" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/ARCADE.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://Level.gd" type="Script" id=5]
+[ext_resource path="res://Assets/ping_pong_8bit_plop.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/ping_pong_8bit_beeep.ogg" type="AudioStream" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 631.854, 12.6999 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2.09485, 371.814 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1279.0
+margin_bottom = 720.0
+color = Color( 0.00392157, 0.0941176, 0.168627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30, 360 )
+
+[node name="UpperWall" type="StaticBody2D" parent="."]
+position = Vector2( 640, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpperWall"]
+shape = SubResource( 1 )
+
+[node name="LowerWall" type="StaticBody2D" parent="."]
+position = Vector2( 640, 720 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LowerWall"]
+shape = SubResource( 1 )
+
+[node name="Opponent" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1250, 360 )
+script = ExtResource( 1 )
+
+[node name="Ball" parent="." instance=ExtResource( 3 )]
+position = Vector2( 640, 360 )
+
+[node name="PlayerScore" type="Label" parent="."]
+margin_left = 540.0
+margin_top = 360.0
+margin_right = 601.0
+margin_bottom = 457.0
+custom_fonts/font = SubResource( 2 )
+text = "0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpponentScore" type="Label" parent="."]
+margin_left = 740.0
+margin_top = 360.0
+margin_right = 801.0
+margin_bottom = 457.0
+custom_fonts/font = SubResource( 2 )
+text = "0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftWall" type="Area2D" parent="."]
+position = Vector2( 3.75153, 356.25 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2( -6.79315, 7.7636 )
+shape = SubResource( 3 )
+
+[node name="RightWall" type="Area2D" parent="."]
+position = Vector2( 1289.57, 360 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2( -6.79315, 7.7636 )
+shape = SubResource( 3 )
+
+[node name="BallHittingSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -12.621
+
+[node name="ScoringSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -14.136
+
+[connection signal="game_over" from="." to="Player" method="_on_Level_game_over"]
+[connection signal="game_over" from="." to="Opponent" method="_on_Level_game_over"]
+[connection signal="game_over" from="." to="Ball" method="_on_Level_game_over"]
+[connection signal="body_exited" from="LeftWall" to="." method="_on_LeftWall_body_exited"]
+[connection signal="body_exited" from="RightWall" to="." method="_on_RightWall_body_exited"]
