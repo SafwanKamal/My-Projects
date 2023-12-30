@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Background.gd" type="Script" id=1]
+[ext_resource path="res://mainlevel.gd" type="Script" id=2]
+
+[node name="mainlevel" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_top = 0.950531
+margin_right = 298.0
+margin_bottom = 298.951
+color = Color( 0.188235, 0.180392, 0.254902, 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="game_over" from="." to="Background" method="_on_mainlevel_game_over"]
+[connection signal="state_change" from="." to="Background" method="_on_mainlevel_state_change"]
