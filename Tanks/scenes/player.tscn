@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://dyj71l0mqpwe8"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_oilu6"]
+[ext_resource type="PackedScene" uid="uid://b82wn16r4fq7q" path="res://scenes/TankPresets.tscn" id="2_ue8d0"]
+[ext_resource type="PackedScene" uid="uid://bu6le5fgifiyj" path="res://scenes/missile.tscn" id="3_a6d4x"]
+[ext_resource type="Script" path="res://scripts/player_camera.gd" id="4_cawga"]
+[ext_resource type="PackedScene" uid="uid://4masmsbj84k0" path="res://scenes/projectile_launcher.tscn" id="4_v1858"]
+[ext_resource type="PackedScene" uid="uid://cxrls2mjwk0ch" path="res://scenes/bullet.tscn" id="5_3ahu4"]
+[ext_resource type="PackedScene" uid="uid://dha5jcrry0tsk" path="res://scenes/explosion.tscn" id="6_jlrio"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_oilu6")
+tank_scene_preset = ExtResource("2_ue8d0")
+missile_scene = ExtResource("3_a6d4x")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -316
+limit_top = -826
+limit_right = 3625
+limit_bottom = 2097
+limit_smoothed = true
+rotation_smoothing_enabled = true
+script = ExtResource("4_cawga")
+
+[node name="ProjectileLauncher" parent="." instance=ExtResource("4_v1858")]
+bullet_scene = ExtResource("5_3ahu4")
+
+[node name="Explosion" parent="." instance=ExtResource("6_jlrio")]
+visible = false
+scale = Vector2(1, 1)
+
+[connection signal="shot" from="ProjectileLauncher" to="." method="_on_projectile_launcher_shot"]
+[connection signal="animation_finished" from="Explosion" to="." method="_on_explosion_animation_finished"]

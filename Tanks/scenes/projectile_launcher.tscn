@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://4masmsbj84k0"]
+
+[ext_resource type="Script" path="res://scripts/projectile_launcher.gd" id="1_p7m4q"]
+[ext_resource type="PackedScene" uid="uid://bu6le5fgifiyj" path="res://scenes/missile.tscn" id="2_2ux8e"]
+
+[node name="ProjectileLauncher" type="Node2D"]
+script = ExtResource("1_p7m4q")
+missile_scene = ExtResource("2_2ux8e")
+
+[node name="BulletTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="MissileTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="MorterTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true

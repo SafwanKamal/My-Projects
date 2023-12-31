@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu6le5fgifiyj"]
+
+[ext_resource type="Script" path="res://scripts/missile.gd" id="1_1qp4a"]
+[ext_resource type="Texture2D" uid="uid://d4m4wheabap3h" path="res://PNG/selected/missile.png" id="1_akqfp"]
+[ext_resource type="PackedScene" uid="uid://dha5jcrry0tsk" path="res://scenes/explosion.tscn" id="3_ntgxj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e05kl"]
+
+[sub_resource type="Gradient" id="Gradient_ahngs"]
+offsets = PackedFloat32Array(0.00662252, 0.708609)
+colors = PackedColorArray(0.972678, 0.0826107, 0.0528685, 1, 0.949653, 0.387042, 0.30356, 1)
+
+[node name="Missile" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_1qp4a")
+
+[node name="Missile" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_akqfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_e05kl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-11, 0)
+lifetime = 0.4
+emission_shape = 3
+emission_rect_extents = Vector2(0, 10)
+gravity = Vector2(0, 0)
+color_ramp = SubResource("Gradient_ahngs")
+
+[node name="Explosion" parent="." instance=ExtResource("3_ntgxj")]
+visible = false
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="explode"]
+[connection signal="animation_finished" from="Explosion" to="." method="_on_explosion_animation_finished"]

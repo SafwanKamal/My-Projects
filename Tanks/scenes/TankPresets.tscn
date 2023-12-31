@@ -1,0 +1,163 @@
+[gd_scene load_steps=15 format=3 uid="uid://b82wn16r4fq7q"]
+
+[ext_resource type="Texture2D" uid="uid://c7t74f6lg62ri" path="res://PNG/selected/tankBody_blue_outline.png" id="1_gng2k"]
+[ext_resource type="Texture2D" uid="uid://cnuf27pf2qjl7" path="res://PNG/selected/tankBlue_barrel2_outline.png" id="2_y8reg"]
+[ext_resource type="Texture2D" uid="uid://cohvjekt4yf2b" path="res://PNG/selected/tankBody_dark_outline.png" id="3_w1hb1"]
+[ext_resource type="Texture2D" uid="uid://c7tl1wfv04hdg" path="res://PNG/selected/tankDark_barrel2_outline.png" id="4_eufq4"]
+[ext_resource type="Texture2D" uid="uid://dvpb3cs31qjop" path="res://PNG/selected/tankBody_red_outline.png" id="5_ghf1i"]
+[ext_resource type="Texture2D" uid="uid://cp7fwxwjbkhw3" path="res://PNG/selected/tankRed_barrel2_outline.png" id="6_6uf7g"]
+[ext_resource type="Texture2D" uid="uid://cjb0tqst13ysl" path="res://PNG/selected/tankBody_sand_outline.png" id="7_pyirm"]
+[ext_resource type="Texture2D" uid="uid://d3so46cvxadrj" path="res://PNG/selected/tankSand_barrel2_outline.png" id="8_5c61x"]
+[ext_resource type="Texture2D" uid="uid://bpjqd6a31jrtu" path="res://PNG/selected/tankBody_green_outline.png" id="9_yfrac"]
+[ext_resource type="Texture2D" uid="uid://cf6oujpnbw70k" path="res://PNG/selected/tankGreen_barrel2_outline.png" id="10_cxa88"]
+[ext_resource type="Texture2D" uid="uid://cdvkr5xmyps0v" path="res://PNG/selected/specialBarrel3_outline.png" id="11_cdpq7"]
+[ext_resource type="Texture2D" uid="uid://col164bthbd7m" path="res://PNG/selected/specialBarrel1_outline.png" id="12_k8uym"]
+
+[sub_resource type="GDScript" id="GDScript_srvta"]
+script/source = "extends Node2D
+
+func get_random_preset() -> Node2D:
+	return get_children().pick_random()
+
+func get_preset(type:int)->Dictionary:
+	var valid = []
+	for child in get_children():
+		if \"Preset\" +str(type) in child.name:
+			valid.push_back(child)
+
+	var dic = {preset=valid.pick_random(),
+				collision_shape = $CollisionShape2D}
+	remove_child(dic.preset)
+	remove_child(dic.collision_shape)
+	queue_free()
+	return dic
+	
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vx34"]
+size = Vector2(38, 38)
+
+[node name="TankPresets" type="Node2D"]
+script = SubResource("GDScript_srvta")
+
+[node name="Preset1Blue" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Preset1Blue"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_gng2k")
+
+[node name="GunPivot" type="Node2D" parent="Preset1Blue"]
+
+[node name="Marker2D" type="Marker2D" parent="Preset1Blue/GunPivot"]
+position = Vector2(37, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Preset1Blue/GunPivot"]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_y8reg")
+offset = Vector2(0, -30)
+
+[node name="Preset1Dark" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Preset1Dark"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_w1hb1")
+
+[node name="GunPivot" type="Node2D" parent="Preset1Dark"]
+
+[node name="Marker2D" type="Marker2D" parent="Preset1Dark/GunPivot"]
+position = Vector2(39, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Preset1Dark/GunPivot"]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_eufq4")
+offset = Vector2(0, -30)
+
+[node name="Preset1Red" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Preset1Red"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ghf1i")
+
+[node name="GunPivot" type="Node2D" parent="Preset1Red"]
+
+[node name="Marker2D" type="Marker2D" parent="Preset1Red/GunPivot"]
+position = Vector2(39, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Preset1Red/GunPivot"]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_6uf7g")
+offset = Vector2(0, -30)
+
+[node name="Preset1Sand" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Preset1Sand"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_pyirm")
+
+[node name="GunPivot" type="Node2D" parent="Preset1Sand"]
+
+[node name="Marker2D" type="Marker2D" parent="Preset1Sand/GunPivot"]
+position = Vector2(40, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Preset1Sand/GunPivot"]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_5c61x")
+offset = Vector2(0, -30)
+
+[node name="Preset1Green" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Preset1Green"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_yfrac")
+
+[node name="GunPivot" type="Node2D" parent="Preset1Green"]
+
+[node name="Marker2D" type="Marker2D" parent="Preset1Green/GunPivot"]
+position = Vector2(40, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Preset1Green/GunPivot"]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_cxa88")
+offset = Vector2(0, -30)
+
+[node name="Preset2" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Preset2"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ghf1i")
+
+[node name="GunPivot" type="Node2D" parent="Preset2"]
+
+[node name="Marker2D" type="Marker2D" parent="Preset2/GunPivot"]
+position = Vector2(38, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Preset2/GunPivot"]
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_cdpq7")
+offset = Vector2(0, 20)
+
+[node name="Preset3" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Preset3"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_gng2k")
+
+[node name="GunPivot" type="Node2D" parent="Preset3"]
+
+[node name="Marker2D" type="Marker2D" parent="Preset3/GunPivot"]
+position = Vector2(35, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Preset3/GunPivot"]
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_k8uym")
+offset = Vector2(0, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2vx34")

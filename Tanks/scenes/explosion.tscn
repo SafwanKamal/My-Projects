@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3 uid="uid://dha5jcrry0tsk"]
+
+[ext_resource type="Texture2D" uid="uid://bq1xeeqkmhvyd" path="res://PNG/Retina/explosion1.png" id="1_hpihm"]
+[ext_resource type="Texture2D" uid="uid://bchtfbbyolb5p" path="res://PNG/Retina/explosion2.png" id="2_4685w"]
+[ext_resource type="Texture2D" uid="uid://c8p5umrnivw0i" path="res://PNG/Retina/explosion3.png" id="3_60v5n"]
+[ext_resource type="Texture2D" uid="uid://cv2xpspq3y6r8" path="res://PNG/Retina/explosion4.png" id="4_3ccsj"]
+[ext_resource type="Texture2D" uid="uid://c1lnw1ke3cunc" path="res://PNG/Retina/explosion5.png" id="5_hnme3"]
+[ext_resource type="Texture2D" uid="uid://dn4rranf40bhn" path="res://PNG/Retina/explosionSmoke1.png" id="6_tuxue"]
+[ext_resource type="Texture2D" uid="uid://ceyfb7fubxaco" path="res://PNG/Retina/explosionSmoke2.png" id="7_8ac31"]
+[ext_resource type="Texture2D" uid="uid://brq23nfxa6ajt" path="res://PNG/Retina/explosionSmoke3.png" id="8_c73pb"]
+[ext_resource type="Texture2D" uid="uid://bj1mui73stqwx" path="res://PNG/Retina/explosionSmoke4.png" id="9_y5omi"]
+[ext_resource type="Texture2D" uid="uid://dtuaerbrfq83c" path="res://PNG/Retina/explosionSmoke5.png" id="10_q6n0c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5mfj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hpihm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4685w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_60v5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3ccsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hnme3")
+}],
+"loop": false,
+"name": &"fire",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_tuxue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8ac31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c73pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_y5omi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q6n0c")
+}],
+"loop": false,
+"name": &"smoke",
+"speed": 25.0
+}]
+
+[node name="Explosion" type="AnimatedSprite2D"]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_j5mfj")
+animation = &"fire"

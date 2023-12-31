@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxrls2mjwk0ch"]
+
+[ext_resource type="Texture2D" uid="uid://cjv33k1aikk0q" path="res://PNG/Retina/bulletDark3_outline.png" id="1_cggoy"]
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_qpv80"]
+[ext_resource type="PackedScene" uid="uid://dha5jcrry0tsk" path="res://scenes/explosion.tscn" id="3_bkhie"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8v5r"]
+size = Vector2(16, 8)
+
+[node name="Bullet" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_qpv80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cggoy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i8v5r")
+
+[node name="Explosion" parent="." instance=ExtResource("3_bkhie")]
+visible = false
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="Explosion" to="." method="_on_explosion_animation_finished"]
