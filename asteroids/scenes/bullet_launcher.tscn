@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bltawt0qi4jl8"]
+
+[ext_resource type="Script" path="res://scripts/BulletLauncher.gd" id="1_2uag5"]
+[ext_resource type="PackedScene" uid="uid://drlh2wuipgo2s" path="res://scenes/bullet.tscn" id="2_4plo2"]
+[ext_resource type="AudioStream" uid="uid://8dasj1eq0jdp" path="res://Assets/audio/player_shot.ogg" id="3_gebjn"]
+
+[node name="BulletLauncher" type="Marker2D"]
+script = ExtResource("1_2uag5")
+bullet_scene = ExtResource("2_4plo2")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+wait_time = 0.578
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_gebjn")
+volume_db = -18.738
+
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

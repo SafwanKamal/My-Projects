@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://b38casqp8ewmm"]
+
+[ext_resource type="Script" path="res://scripts/explosion.gd" id="1_rf1lx"]
+[ext_resource type="AudioStream" uid="uid://4mvt3xpkbhel" path="res://Assets/audio/explosion.ogg" id="2_cj27n"]
+
+[node name="Explosion" type="CPUParticles2D"]
+amount = 10
+lifetime = 2.0
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 300.0
+script = ExtResource("1_rf1lx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_cj27n")
+volume_db = -9.369
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="on_timer_timeout"]

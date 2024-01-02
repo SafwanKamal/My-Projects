@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://brumw8hwsh46b"]
+
+[ext_resource type="Script" path="res://scripts/asteroid.gd" id="1_8a0xa"]
+[ext_resource type="PackedScene" uid="uid://cwyke57ivjii7" path="res://scenes/visibility_bounding_box.tscn" id="2_qnfyd"]
+[ext_resource type="PackedScene" uid="uid://b38casqp8ewmm" path="res://scenes/explosion.tscn" id="2_t3rp3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c6ogk"]
+
+[node name="Asteroid" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_8a0xa")
+Explosion = ExtResource("2_t3rp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c6ogk")
+
+[node name="VisibilityBoundingBox" parent="." instance=ExtResource("2_qnfyd")]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

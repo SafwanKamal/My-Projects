@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5mp8pgk6suto"]
+
+[ext_resource type="Script" path="res://scripts/AsteroidSpawner.gd" id="1_pubjf"]
+[ext_resource type="PackedScene" uid="uid://brumw8hwsh46b" path="res://scenes/asteroid.tscn" id="2_faaq4"]
+[ext_resource type="PackedScene" uid="uid://dr3f8y7n76kxj" path="res://scenes/invincible_power.tscn" id="3_gdpvm"]
+
+[node name="AsteroidSpawner" type="Node2D"]
+script = ExtResource("1_pubjf")
+asteroid_scene = ExtResource("2_faaq4")
+invincible_power_scene = ExtResource("3_gdpvm")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-34, -30)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(339, -31)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(349, 193)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(-32, 199)
+
+[node name="SpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

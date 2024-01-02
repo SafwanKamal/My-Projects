@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgrempasajkw8"]
+
+[ext_resource type="PackedScene" uid="uid://cc7ahnwut1c8c" path="res://scenes/player.tscn" id="1_civen"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_qkg53"]
+[ext_resource type="PackedScene" uid="uid://bi0dmetvfp60n" path="res://scenes/game_over_screen.tscn" id="3_1e1dh"]
+[ext_resource type="PackedScene" uid="uid://b38casqp8ewmm" path="res://scenes/explosion.tscn" id="4_5ifl0"]
+[ext_resource type="PackedScene" uid="uid://b5mp8pgk6suto" path="res://scenes/asteroid_spawner.tscn" id="5_3g4h5"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_qkg53")
+Explosion = ExtResource("4_5ifl0")
+game_over_scene = ExtResource("3_1e1dh")
+
+[node name="Player" parent="." instance=ExtResource("1_civen")]
+position = Vector2(163, 82)
+max_speed = 30
+
+[node name="AsteroidSpawner" parent="." instance=ExtResource("5_3g4h5")]

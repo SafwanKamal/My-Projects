@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cc7ahnwut1c8c"]
+
+[ext_resource type="Script" path="res://scripts/movement.gd" id="1_vkfys"]
+[ext_resource type="Texture2D" uid="uid://bav2njfs2ofkr" path="res://Assets/Player.png" id="2_eena5"]
+[ext_resource type="Texture2D" uid="uid://c1ab31u1j3inf" path="res://Assets/EngineThrottle.png" id="2_rt5ga"]
+[ext_resource type="PackedScene" uid="uid://cnphtfcp1tat3" path="res://scenes/missile.tscn" id="2_u2ug5"]
+[ext_resource type="PackedScene" uid="uid://cwyke57ivjii7" path="res://scenes/visibility_bounding_box.tscn" id="3_brsuc"]
+[ext_resource type="PackedScene" uid="uid://bltawt0qi4jl8" path="res://scenes/bullet_launcher.tscn" id="5_52r8g"]
+[ext_resource type="AudioStream" uid="uid://d3rcm7k56o7j8" path="res://Assets/audio/engine.ogg" id="6_s0g6i"]
+[ext_resource type="Texture2D" uid="uid://3038ihbsqbne" path="res://Assets/invincible_circle.png" id="7_pu13c"]
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 4
+script = ExtResource("1_vkfys")
+max_speed = 40
+missile_scene = ExtResource("2_u2ug5")
+
+[node name="EngineThrottle" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_rt5ga")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_eena5")
+
+[node name="VisibilityBoundingBox" parent="." instance=ExtResource("3_brsuc")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-5, -5, 0, -2, 5, -5, 0, 5)
+
+[node name="BulletLauncher" parent="." instance=ExtResource("5_52r8g")]
+position = Vector2(0, 6)
+cooldown_time = 0.5
+
+[node name="EngineSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_s0g6i")
+volume_db = -11.243
+
+[node name="InvincibleCircle" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_pu13c")
+offset = Vector2(0, -1)
+
+[node name="MissileCooldownTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true

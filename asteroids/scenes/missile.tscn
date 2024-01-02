@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnphtfcp1tat3"]
+
+[ext_resource type="Texture2D" uid="uid://b0wvu6bbq78t6" path="res://Assets/missile.png" id="1_434wl"]
+[ext_resource type="Script" path="res://scripts/missile.gd" id="1_ywa8y"]
+[ext_resource type="PackedScene" uid="uid://b38casqp8ewmm" path="res://scenes/explosion.tscn" id="3_pfcfc"]
+[ext_resource type="AudioStream" uid="uid://bw8iv51bjo2u8" path="res://Assets/audio/bomb-timer.wav" id="4_vsuka"]
+[ext_resource type="Texture2D" uid="uid://bc66ybk7vqqi1" path="res://Assets/explosion.png" id="5_4kxju"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eonp0"]
+height = 20.0
+
+[node name="Missile" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_ywa8y")
+explosion_scene = ExtResource("3_pfcfc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_434wl")
+offset = Vector2(0.553, 0)
+
+[node name="VisibilityNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-0.147134, 0.00926924)
+scale = Vector2(0.106365, 0.181781)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vsuka")
+autoplay = true
+
+[node name="AfterExplosionImage" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("5_4kxju")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.00620401, 0.00399017)
+shape = SubResource("CapsuleShape2D_eonp0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="queue_free"]
+[connection signal="timeout" from="Timer" to="." method="explode"]
