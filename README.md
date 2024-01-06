@@ -20,6 +20,10 @@ You can play the games at gotm.io. Here are the links:
 
 # Some Gameplay Snippets
 
+## The GIFs might take a few seconds to load.
+
+<p align="center" width="100%">
+
 
 ![Space Invader](https://github.com/SafwanKamal/My-Projects/assets/63901799/efbdcc2b-a8b9-48f2-8049-a72e44f8fac9)
 
@@ -35,6 +39,7 @@ You can play the games at gotm.io. Here are the links:
 
 ![TicTacToe](https://github.com/SafwanKamal/My-Projects/assets/63901799/cb4751e3-5830-4fe0-aea5-544a0aadb3b2)
 
+</p>
 
 # Resources 
 
