@@ -17,9 +17,9 @@ You can play the games at gotm.io. Here are the links:
 # Some Gameplay Snippets
 
 
-![SpaceInvader](https://github.com/SafwanKamal/My-Projects/assets/63901799/1a20317c-304b-4504-beed-dbc54b1e7ac4)
+![Space Invader](https://github.com/SafwanKamal/My-Projects/assets/63901799/efbdcc2b-a8b9-48f2-8049-a72e44f8fac9)
 
-
+![Space Defender](https://github.com/SafwanKamal/My-Projects/assets/63901799/6525b154-513f-41de-939b-0fcf00a5c8ed)
 
 ![Tank](https://github.com/SafwanKamal/My-Projects/assets/63901799/7844641c-4b41-42ec-9ac9-563801ea280e)
 
