@@ -21,8 +21,7 @@ You can play the games at gotm.io. Here are the links:
 
 
 
-
-![Tank](https://github.com/SafwanKamal/My-Projects/assets/63901799/285795bf-84e9-4af2-95a6-f1afa378ed07)
+![Tank](https://github.com/SafwanKamal/My-Projects/assets/63901799/7844641c-4b41-42ec-9ac9-563801ea280e)
 
 ![PongAI](https://github.com/SafwanKamal/My-Projects/assets/63901799/a517507e-68ec-42e7-b782-6c1704f9fc00)
 
