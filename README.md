@@ -11,7 +11,10 @@ You can play the games at gotm.io. Here are the links:
 ## ATTACK OF THE SLIMES: https://gotm.io/safwankamal/attack-of-the-slimes
 
 
+# Some Gameplay Snippets
 
+
+![SpaceInvader](https://github.com/SafwanKamal/My-Projects/assets/63901799/1a20317c-304b-4504-beed-dbc54b1e7ac4)
 
 # Resources 
 
