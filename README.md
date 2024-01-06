@@ -10,11 +10,24 @@ You can play the games at gotm.io. Here are the links:
 
 ## ATTACK OF THE SLIMES: https://gotm.io/safwankamal/attack-of-the-slimes
 
+## PongAI: https://gotm.io/safwankamal/pongai
+
+## Pong2P: https://gotm.io/safwankamal/pong2p
 
 # Some Gameplay Snippets
 
 
 ![SpaceInvader](https://github.com/SafwanKamal/My-Projects/assets/63901799/1a20317c-304b-4504-beed-dbc54b1e7ac4)
+
+
+
+
+![Tank](https://github.com/SafwanKamal/My-Projects/assets/63901799/285795bf-84e9-4af2-95a6-f1afa378ed07)
+
+![PongAI](https://github.com/SafwanKamal/My-Projects/assets/63901799/a517507e-68ec-42e7-b782-6c1704f9fc00)
+
+![Pong2P](https://github.com/SafwanKamal/My-Projects/assets/63901799/54d27f78-37f6-4904-bb21-89d06640b64f)
+
 
 # Resources 
 
