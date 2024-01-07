@@ -26,17 +26,11 @@ You can play the games at gotm.io. Here are the links:
 
 
 ![Space Invader](https://github.com/SafwanKamal/My-Projects/assets/63901799/efbdcc2b-a8b9-48f2-8049-a72e44f8fac9)
-
 ![Space Defender](https://github.com/SafwanKamal/My-Projects/assets/63901799/6525b154-513f-41de-939b-0fcf00a5c8ed)
-
 ![Tank](https://github.com/SafwanKamal/My-Projects/assets/63901799/7844641c-4b41-42ec-9ac9-563801ea280e)
-
-![Asteroids](https://github.com/SafwanKamal/My-Projects/assets/63901799/d096e15b-0d83-4a41-a002-9b55d8ac24b3)
-
+![Asteroids1](https://github.com/SafwanKamal/My-Projects/assets/63901799/13db5a4e-18fc-4bb8-a380-bce1694f2f3e)
 ![PongAI](https://github.com/SafwanKamal/My-Projects/assets/63901799/a517507e-68ec-42e7-b782-6c1704f9fc00)
-
 ![Pong2P](https://github.com/SafwanKamal/My-Projects/assets/63901799/54d27f78-37f6-4904-bb21-89d06640b64f)
-
 ![TicTacToe](https://github.com/SafwanKamal/My-Projects/assets/63901799/cb4751e3-5830-4fe0-aea5-544a0aadb3b2)
 
 </p>
@@ -104,7 +98,7 @@ For most of the projects, Godot version 3.5 can be used to open them. Godot vers
 
 ## Appreciation 
 
-PondWithAI and #SpaceDefender were co-developed with @mubashirtanveerayon
+#PongWithAI and #SpaceDefender were co-developed with @mubashirtanveerayon
 
 
 
