@@ -22,18 +22,15 @@ You can play the games at gotm.io. Here are the links:
 
 ## The GIFs might take a few seconds to load.
 
-<p align="center" width="100%">
 
+![Space Invader](https://github.com/SafwanKamal/My-Projects/assets/63901799/b4418fc1-e509-4606-a129-81a1feca2f60)
+![Space Defender](https://github.com/SafwanKamal/My-Projects/assets/63901799/5e545711-eee9-4e21-ab65-f00749523be1)
+![Asteroids](https://github.com/SafwanKamal/My-Projects/assets/63901799/f59a44cf-1458-46f8-8021-d8a0d6cd4560)
+![Tank (2)](https://github.com/SafwanKamal/My-Projects/assets/63901799/94c9c111-2b9c-4d65-aa00-fafcfd60082d)
+![PongAI](https://github.com/SafwanKamal/My-Projects/assets/63901799/36385036-6c6d-41f4-a049-f741fc0405f0)
+![Pong2P](https://github.com/SafwanKamal/My-Projects/assets/63901799/661cc89f-ac6f-4799-b014-d43c92a1998d)
+![TicTacToe-min](https://github.com/SafwanKamal/My-Projects/assets/63901799/038a5ca9-a334-45d8-9f62-5ad2c70b44ee)
 
-![Space Invader](https://github.com/SafwanKamal/My-Projects/assets/63901799/efbdcc2b-a8b9-48f2-8049-a72e44f8fac9)
-![Space Defender](https://github.com/SafwanKamal/My-Projects/assets/63901799/6525b154-513f-41de-939b-0fcf00a5c8ed)
-![Tank](https://github.com/SafwanKamal/My-Projects/assets/63901799/7844641c-4b41-42ec-9ac9-563801ea280e)
-![Asteroids1](https://github.com/SafwanKamal/My-Projects/assets/63901799/13db5a4e-18fc-4bb8-a380-bce1694f2f3e)
-![PongAI](https://github.com/SafwanKamal/My-Projects/assets/63901799/a517507e-68ec-42e7-b782-6c1704f9fc00)
-![Pong2P](https://github.com/SafwanKamal/My-Projects/assets/63901799/54d27f78-37f6-4904-bb21-89d06640b64f)
-![TicTacToe](https://github.com/SafwanKamal/My-Projects/assets/63901799/cb4751e3-5830-4fe0-aea5-544a0aadb3b2)
-
-</p>
 
 # Resources 
 
