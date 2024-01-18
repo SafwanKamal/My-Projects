@@ -1,5 +1,20 @@
 # My-Projects
 
+# Some Gameplay Snippets
+
+## The GIFs might take a few seconds to load.
+
+
+![Space Invader](https://github.com/SafwanKamal/My-Projects/assets/63901799/b4418fc1-e509-4606-a129-81a1feca2f60)
+![Space Defender](https://github.com/SafwanKamal/My-Projects/assets/63901799/5e545711-eee9-4e21-ab65-f00749523be1)
+![Asteroids](https://github.com/SafwanKamal/My-Projects/assets/63901799/f59a44cf-1458-46f8-8021-d8a0d6cd4560)
+![Tank (2)](https://github.com/SafwanKamal/My-Projects/assets/63901799/94c9c111-2b9c-4d65-aa00-fafcfd60082d)
+![PongAI](https://github.com/SafwanKamal/My-Projects/assets/63901799/36385036-6c6d-41f4-a049-f741fc0405f0)
+![Pong2P](https://github.com/SafwanKamal/My-Projects/assets/63901799/661cc89f-ac6f-4799-b014-d43c92a1998d)
+![TicTacToe-min](https://github.com/SafwanKamal/My-Projects/assets/63901799/038a5ca9-a334-45d8-9f62-5ad2c70b44ee)
+
+
+
 # How to play the games:
 
 You can play the games at gotm.io. Here are the links:
@@ -17,19 +32,6 @@ You can play the games at gotm.io. Here are the links:
 ## TicTacToe: https://gotm.io/safwankamal/tictactoe
 
 ## Asteroids: https://gotm.io/safwankamal/asteroids
-
-# Some Gameplay Snippets
-
-## The GIFs might take a few seconds to load.
-
-
-![Space Invader](https://github.com/SafwanKamal/My-Projects/assets/63901799/b4418fc1-e509-4606-a129-81a1feca2f60)
-![Space Defender](https://github.com/SafwanKamal/My-Projects/assets/63901799/5e545711-eee9-4e21-ab65-f00749523be1)
-![Asteroids](https://github.com/SafwanKamal/My-Projects/assets/63901799/f59a44cf-1458-46f8-8021-d8a0d6cd4560)
-![Tank (2)](https://github.com/SafwanKamal/My-Projects/assets/63901799/94c9c111-2b9c-4d65-aa00-fafcfd60082d)
-![PongAI](https://github.com/SafwanKamal/My-Projects/assets/63901799/36385036-6c6d-41f4-a049-f741fc0405f0)
-![Pong2P](https://github.com/SafwanKamal/My-Projects/assets/63901799/661cc89f-ac6f-4799-b014-d43c92a1998d)
-![TicTacToe-min](https://github.com/SafwanKamal/My-Projects/assets/63901799/038a5ca9-a334-45d8-9f62-5ad2c70b44ee)
 
 
 # Resources 
