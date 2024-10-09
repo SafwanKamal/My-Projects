@@ -17,21 +17,7 @@
 
 # How to play the games:
 
-You can play the games at gotm.io. Here are the links:
-
-## SPACE INVADER: https://gotm.io/safwankamal/spacedefender
-
-## SPACE DEFENDER: https://gotm.io/safwankamal/space-defender
-
-## ATTACK OF THE SLIMES: https://gotm.io/safwankamal/attack-of-the-slimes
-
-## PongAI: https://gotm.io/safwankamal/pongai
-
-## Pong2P: https://gotm.io/safwankamal/pong2p
-
-## TicTacToe: https://gotm.io/safwankamal/tictactoe
-
-## Asteroids: https://gotm.io/safwankamal/asteroids
+You can PLAY all the games on itch.io: https://safka.itch.io/
 
 
 # Resources 
